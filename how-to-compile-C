@@ -1,0 +1,3 @@
+Cách biên dịch chương trình sử dụng ngôn ngữ C :
+1.Biên dịch file.c để tạo ra file.exe bằng câu lệnh :"gcc file.c"
+2.Chạy file exe :"./file."

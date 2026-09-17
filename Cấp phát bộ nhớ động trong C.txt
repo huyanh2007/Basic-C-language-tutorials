@@ -1,0 +1,15 @@
+Các hàm cấp phát bộ nhớ động cốt lõi :
+
+malloc() :Cấp phát một khối bộ nhớ có kích thước chỉ định (tính bằng byte). Không xóa dữ liệu cũ (chứa giá trị rác).
+
+calloc() :Cấp phát bộ nhớ cho mảng phần tử và tự động xóa toàn bộ về số 0.
+
+realloc() :Thay đổi kích thước của vùng bộ nhớ đã cấp phát trước đó (nới rộng hoặc thu hẹp).
+
+free() : Giải phóng vùng bộ nhớ Heap đã xin 
+
+Mỗi khi cấp phát động, bạn bắt buộc phải tuân theo quy trình nghiêm ngặt sau:
+Khai báo con trỏ làm "tay vịn" để quản lý vùng nhớ.
+Cấp phát bằng malloc hoặc calloc.
+Kiểm tra xem hệ điều hành có cấp phát thành công không (nếu hết RAM, con trỏ sẽ nhận giá trị NULL).
+Giải phóng bộ nhớ bằng free sau khi dùng xong
